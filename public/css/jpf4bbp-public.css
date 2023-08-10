@@ -1,0 +1,62 @@
+.badge-forum {
+    background-color: gray;
+}
+
+label.modify {
+    margin: -6px 0 3px;
+    font-size: 80%;
+    display: block;
+    color: gray;
+}
+
+.search {
+    padding: .375rem .75rem !important;
+}
+
+.custom-select {
+    padding: 0 1.75rem 0 .75rem;
+}
+
+button.send-form, button.search {
+    padding: .2rem 0 !important;
+    position: relative !important;
+    width: 42px !important;
+    position: relative !important;
+}
+
+button.send-form img, button.send-form svg, button.search img, button.search svg {
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 11px;
+}
+
+table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting {
+    background: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 1rem !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: .2rem .6rem !important;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+.rotate {
+    -webkit-animation: rotation 2s infinite linear;
+}
+  
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+  
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}

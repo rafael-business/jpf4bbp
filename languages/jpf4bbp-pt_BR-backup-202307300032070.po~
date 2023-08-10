@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Job purpose forums for bbPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-28 07:39+0000\n"
+"PO-Revision-Date: 2023-07-29 23:50+0000\n"
+"Last-Translator: Rafael dos Santos\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Domain: jpf4bbp"
+
+#: admin/class-jpf4bbp-admin.php:120
+msgid "-- select --"
+msgstr "-- selecione --"
+
+#. Description of the plugin
+msgid "Adds Forums with purpose of work in bbPress."
+msgstr "Adiciona Fóruns com finalidade de trabalho no bbPress."
+
+#: public/class-jpf4bbp-public.php:139
+msgid "Closed"
+msgstr "Fechado"
+
+#: public/partials/jpf4bbp-objectives-topics.php:73
+msgid "Current status"
+msgstr "Status atual"
+
+#: admin/class-jpf4bbp-admin.php:123
+msgid "Discussion"
+msgstr "Discussão"
+
+#. Author URI of the plugin
+msgid "https://ween.codes"
+msgstr "https://ween.codes"
+
+#. URI of the plugin
+msgid "https://ween.codes/plugins/job-purpose-forums-for-bbPress"
+msgstr "https://ween.codes/plugins/job-purpose-forums-for-bbPress"
+
+#: admin/class-jpf4bbp-admin.php:112
+msgid "Job purpose forum"
+msgstr "Fórum com propósito de trabalho"
+
+#. Name of the plugin
+msgid "Job purpose forums for bbPress"
+msgstr "Fóruns com propósito de trabalho para bbPress"
+
+#: public/partials/jpf4bbp-objectives-topics.php:65
+#, php-format
+msgid "Most recent answer: %1$s"
+msgstr "Resposta mais recente: %1$s"
+
+#: admin/class-jpf4bbp-admin.php:114 admin/class-jpf4bbp-admin.php:116
+msgid "Objective"
+msgstr "Objetivo"
+
+#: public/class-jpf4bbp-public.php:138
+msgid "Open"
+msgstr "Aberto"
+
+#: public/class-jpf4bbp-public.php:109 public/class-jpf4bbp-public.php:128
+msgid "Opportunities"
+msgstr "Oportunidades"
+
+#: public/class-jpf4bbp-public.php:110
+msgid "opportunities"
+msgstr "oportunidades"
+
+#: admin/class-jpf4bbp-admin.php:126
+#: public/partials/jpf4bbp-objectives-topics.php:36
+msgid "Opportunity"
+msgstr "Oportunidade"
+
+#: public/class-jpf4bbp-public.php:142
+msgid "Pending"
+msgstr "Pendente"
+
+#: public/class-jpf4bbp-public.php:140
+msgid "Spam"
+msgstr "Spam"
+
+#: public/partials/jpf4bbp-objectives-topics.php:37
+msgid "Status"
+msgstr "Status"
+
+#: public/class-jpf4bbp-public.php:141
+msgid "Trash"
+msgstr "Excluído"
+
+#. Author of the plugin
+msgid "Ween Codes"
+msgstr "Ween Codes"
