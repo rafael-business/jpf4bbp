@@ -160,6 +160,11 @@ class Jpf4bbp {
 		$this->loader->add_action( 'bbp_forum_metabox', $plugin_admin, 'bbp_extra_forum_fields_admin' );
 		$this->loader->add_action( 'save_post', 		$plugin_admin, 'bbp_save_forum_extra_fields', 10, 2 );
 
+		$this->loader->add_action( 'init', $plugin_admin, 'jpf4bbp_register_specialties_taxonomy' );
+		$this->loader->add_action( 'init', $plugin_admin, 'jpf4bbp_register_odss_taxonomy' );
+
+		$this->loader->add_action( 'bp_admin_groups_tabs', $plugin_admin, 'jpf4bbp_admin_groups_tabs' );
+
 	}
 
 	/**
@@ -183,6 +188,8 @@ class Jpf4bbp {
 		$this->loader->add_filter( 'bbp_new_topic_pre_insert', $plugin_public, 'jpf4bbp_change_default_topic_status', 100, 1);
 
 		$this->loader->add_filter( 'bbp_current_user_can_access_create_topic_form', $plugin_public, 'jpf4bbp_current_user_can_create_topic', 10, 1 );
+
+		$this->loader->add_action( 'bbp_theme_after_topic_form_content', $plugin_public, 'jpf4bbp_new_fields' );
 
 	}
 

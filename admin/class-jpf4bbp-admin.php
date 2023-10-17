@@ -140,4 +140,97 @@ class Jpf4bbp_Admin {
 		}
 	}
 
+	public function jpf4bbp_register_specialties_taxonomy() {
+		$labels = array(
+			'name'                       => _x('Specialties', 'taxonomy general name', 'jpf4bbp'),
+			'singular_name'              => _x('Specialty', 'taxonomy singular name', 'jpf4bbp'),
+			'search_items'               => __('Search Specialties', 'jpf4bbp'),
+			'popular_items'              => __('Popular Specialties', 'jpf4bbp'),
+			'all_items'                  => __('All Specialties', 'jpf4bbp'),
+			'parent_item'                => null,
+			'parent_item_colon'          => null,
+			'edit_item'                  => __('Edit Specialty', 'jpf4bbp'),
+			'update_item'                => __('Update Specialty', 'jpf4bbp'),
+			'add_new_item'               => __('Add New Specialty', 'jpf4bbp'),
+			'new_item_name'              => __('New Specialty Name', 'jpf4bbp'),
+			'separate_items_with_commas' => __('Separate Specialties with commas', 'jpf4bbp'),
+			'add_or_remove_items'        => __('Add or remove Specialties', 'jpf4bbp'),
+			'choose_from_most_used'      => __('Choose from the most used Specialties', 'jpf4bbp'),
+			'menu_name'                  => __('Specialties', 'jpf4bbp'),
+		);
+	
+		$args = array(
+			'hierarchical'          => true,
+			'labels'                => $labels,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_admin_column'     => true,
+			'query_var'             => true,
+			'rewrite'               => array('slug' => 'specialties'),
+		);
+	
+		register_taxonomy('specialties', 'topic', $args);
+	}
+
+	public function jpf4bbp_register_odss_taxonomy() {
+		$labels = array(
+			'name'                       => _x('ODSs', 'taxonomy general name', 'jpf4bbp'),
+			'singular_name'              => _x('ODS', 'taxonomy singular name', 'jpf4bbp'),
+			'search_items'               => __('Search ODSs', 'jpf4bbp'),
+			'popular_items'              => __('Popular ODSs', 'jpf4bbp'),
+			'all_items'                  => __('All ODSs', 'jpf4bbp'),
+			'parent_item'                => null,
+			'parent_item_colon'          => null,
+			'edit_item'                  => __('Edit ODS', 'jpf4bbp'),
+			'update_item'                => __('Update ODS', 'jpf4bbp'),
+			'add_new_item'               => __('Add New ODS', 'jpf4bbp'),
+			'new_item_name'              => __('New ODS Name', 'jpf4bbp'),
+			'separate_items_with_commas' => __('Separate ODSs with commas', 'jpf4bbp'),
+			'add_or_remove_items'        => __('Add or remove ODSs', 'jpf4bbp'),
+			'choose_from_most_used'      => __('Choose from the most used ODSs', 'jpf4bbp'),
+			'menu_name'                  => __('ODSs', 'jpf4bbp'),
+		);
+	
+		$args = array(
+			'hierarchical'          => true,
+			'labels'                => $labels,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_admin_column'     => true,
+			'query_var'             => true,
+			'rewrite'               => array('slug' => 'odss'),
+		);
+	
+		register_taxonomy('odss', 'topic', $args);
+	}
+
+	public function jpf4bbp_admin_groups_tabs() {
+		$tabs_html    = '';
+		$idle_class   = 'nav-tab';
+		$active_class = 'nav-tab nav-tab-active';
+		$active_tab   = '';
+
+		$tabs = array();
+
+		$tabs[] = array(
+			'href'  => ( is_multisite() ) ? get_admin_url( get_current_blog_id(), add_query_arg( array( 'taxonomy' =>  'specialties', 'post_type' => bbp_get_topic_post_type() ), 'edit-tags.php' ) ) : bp_get_admin_url( add_query_arg( array( 'taxonomy' =>  'specialties', 'post_type' => bbp_get_topic_post_type() ), 'edit-tags.php' ) ),
+			'name'  => __( 'Specialties', 'jpf4bbp' ),
+			'class' => 'bp-tags',
+		);
+
+		$tabs[] = array(
+			'href'  => ( is_multisite() ) ? get_admin_url( get_current_blog_id(), add_query_arg( array( 'taxonomy' =>  'odss', 'post_type' => bbp_get_topic_post_type() ), 'edit-tags.php' ) ) : bp_get_admin_url( add_query_arg( array( 'taxonomy' =>  'odss', 'post_type' => bbp_get_topic_post_type() ), 'edit-tags.php' ) ),
+			'name'  => __( 'ODSs', 'jpf4bbp' ),
+			'class' => 'bp-tags',
+		);
+
+		foreach ( array_values( $tabs ) as $tab_data ) {
+			$is_current = (bool) ( $tab_data['name'] == $active_tab );
+			$tab_class  = $is_current ? $tab_data['class'] . ' ' . $active_class : $tab_data['class'] . ' ' . $idle_class;
+			$tabs_html .= '<a href="' . esc_url( $tab_data['href'] ) . '" class="' . esc_attr( $tab_class ) . '">' . esc_html( $tab_data['name'] ) . '</a>';
+		}
+
+		echo $tabs_html;
+	}
+
 }

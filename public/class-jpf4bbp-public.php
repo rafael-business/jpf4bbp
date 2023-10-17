@@ -190,4 +190,8 @@ class Jpf4bbp_Public {
     	return $ret_val;
 	}
 
+	public function jpf4bbp_new_fields() {
+		include 'partials/jpf4bbp-opportunity-new-fields.php';
+	}
+
 }
